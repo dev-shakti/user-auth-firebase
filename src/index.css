@@ -17,6 +17,32 @@ h1{
 .links:hover{
     color: #2980b9;
 }
+
+.home-page {
+    text-align: center;
+    padding: 20px;
+}
+  
+.home-container {
+    margin: auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.home-container p{
+    margin: 20px 0;
+}
+
+
+.home-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 .register-page,.login-page{
     background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)) #3498db;
     width:100%;
@@ -34,12 +60,8 @@ h1{
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-.input-group{
+.input-group {
     margin: 20px 0;
-}
-
-.input-group.error input {
-    border: 2px solid red;
   }
 
 label{
@@ -93,6 +115,7 @@ input:hover,input:focus{
 }
 
 .error-message{
-    color: #e74c3c;
-    margin-top: 7px;
+    margin-top: 5px;
+    color: red;
 }
+

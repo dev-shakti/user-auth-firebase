@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -36,7 +36,7 @@ const Login = () => {
       <div className="login-container">
         <h1>Login</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={`input-group ${errors.email ? 'error' : ''}`}>
+          <div className="input-group">
             <label>Email</label>
             <input
             autoComplete="off"
@@ -46,7 +46,7 @@ const Login = () => {
             />
             {errors.email && <p className="error-message">{errors.email.message}</p>}
           </div>
-          <div className={`input-group ${errors.password ? 'error' : ''}`}>
+          <div className="input-group">
             <label>Password</label>
             <input
              autoComplete="off"
@@ -58,7 +58,7 @@ const Login = () => {
           </div>
           <button className="btn">Login</button>
           <p className="text">
-            Don't have account ?
+            Don't have account ? 
             <Link className="links" to="/register">         
               Register
             </Link>

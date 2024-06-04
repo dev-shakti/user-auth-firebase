@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link,useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -11,6 +10,7 @@ const auth = getAuth(app);
 const Register = () => {
 
   const navigate=useNavigate();
+
   const {
     handleSubmit,
     register,
@@ -41,17 +41,6 @@ const Register = () => {
       <div className="register-container">
         <h1>Register</h1>
         <form onSubmit={handleSubmit(onsubmit)}>
-          {/* <div className="input-group">
-            <label>Username</label>
-            <input
-              type="text"
-              placeholder="Enter username"
-              {...register("username", { required: "Username is required" })}
-            />
-            {errors.username && (
-              <p className="error-message">{errors.username.message}</p>
-            )}
-          </div> */}
           <div className="input-group">
             <label>Email</label>
             <input
@@ -78,7 +67,7 @@ const Register = () => {
           </div>
           <button className="btn">Register</button>
           <p className="text">
-            Already have account ?{" "}
+            Already have account ?
             <Link className="links" to="/login">
               Login
             </Link>
